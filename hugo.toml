@@ -3,9 +3,12 @@ languageCode = 'en-us'
 title = 'iSite'
 
 [params]
+copyright = "All rights reserved"
 slogan = 'Super simple theme for Hugo'
+# footer = 'Copyright iSite'
 
 [markup]
   [markup.goldmark]
     [markup.goldmark.renderer]
       unsafe = true
+

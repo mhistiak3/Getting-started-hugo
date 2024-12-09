@@ -1,3 +1,10 @@
 <footer class="py-2 bg-primary text-white text-center">
-    <p>Copyright {{ now.Year }}. All rights reserved.</p>
+    {{if .Site.Params.footer}} 
+    {{.Site.Params.footer}}   
+    {{else}}
+    <p>&copy; Copyright <span id="year"></span>
+        <noscript>{{ now.Format "2006" }}</noscript> 
+        {{ .Site.Title }}.{{if .Site.Params.copyright}} {{ .Site.Params.copyright }} {{else}}All rights reserved {{end}} 
+    </p>
+    {{end}}
 </footer>

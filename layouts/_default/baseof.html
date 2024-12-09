@@ -2,19 +2,19 @@
 <html lang="en">
 
 <head>
-  {{ partial "head" . }}
+  {{ partialCached "head" . }}
 </head>
 
 <body>
-  <main>
+  
     {{ partial "header" . }}
     <main>
       {{ block "main" . }}{{ end }}
 
     </main>
     {{ partial "footer" . }}
-  </main>
-  {{ partial "script-footer" . }}
+  
+  {{ partialCached "script-footer" . }}
 </body>
 
 </html>
